@@ -33,10 +33,6 @@ exports.task_upload = asyncMiddlware(async (req, res) => {
     return;
   }
 
-  let sqlCheck;
-
-  db.get;
-
   const insert =
     "INSERT INTO task (name, file_path, is_deleted, delete_date) VALUES(?,?,?,?)";
   db.run(
