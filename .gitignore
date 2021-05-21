@@ -12,5 +12,6 @@ package-lock.json
 #dotenv
 .env
 
-#files
-uploads/*
+#db and files
+*.sqlite
+*.zip
