@@ -12,8 +12,5 @@ package-lock.json
 #dotenv
 .env
 
-#dbsqlite
-*.sqlite
-
 #files
 uploads/*

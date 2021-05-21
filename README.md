@@ -25,6 +25,9 @@ npm run dev
             "password": "admin123456"
         }
         ```
+        You can login with admin@example.com OR user@example.com
+        <br/>
+        with password <i>admin123456</i>
 
 2. Task (File)
     * Get All Task -> /task (GET)
