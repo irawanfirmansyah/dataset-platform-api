@@ -35,8 +35,8 @@ exports.book_task = asyncMiddlware(async (req, res) => {
         res.status(500).send({ message: "Internal server error." });
         return;
       }
-      let sqlGetTaskID = `SELECT id FROM task WHERE name = ?`;
-      db.get(sqlGetTaskID, [req.body.task_name], function (err, row) {
+      let sqlGetTaskID = `SELECT id FROM task WHERE id = ?`;
+      db.get(sqlGetTaskID, [req.body.task_id], function (err, row) {
         let taskId = null;
         if (!row) {
           res.status(400).send({ message: "Task doesn't exist." });
