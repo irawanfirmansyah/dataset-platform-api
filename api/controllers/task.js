@@ -23,7 +23,8 @@ exports.get_all_task = asyncMiddlware(async (_, res) => {
 
 exports.task_upload = asyncMiddlware(async (req, res) => {
   let file = req.files.dataset;
-  if (file.mimetype !== "application/x-zip-compressed") {
+  let zipFormats = ["application/x-zip-compressed", "application/zip"]
+  if (!zipFormats.includes(file.mimetype)) {
     res.status(500).send({
       error:
         "Can't upload file type : " +
